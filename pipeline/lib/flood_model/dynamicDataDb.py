@@ -25,8 +25,8 @@ class DatabaseManager:
         self.triggerFolder = PIPELINE_OUTPUT + "triggers_rp_per_station/"
         self.affectedFolder = PIPELINE_OUTPUT + "calculated_affected/"
         self.EXPOSURE_DATA_SOURCES = SETTINGS[countryCodeISO3]['EXPOSURE_DATA_SOURCES']
-        self.API_SERVICE_URL = SETTINGS[countryCodeISO3]['IBF_API_URL']
-        self.ADMIN_PASSWORD = SETTINGS[countryCodeISO3]['PASSWORD']
+        #self.API_SERVICE_URL = SETTINGS[countryCodeISO3]['IBF_API_URL']
+        #self.ADMIN_PASSWORD = SETTINGS[countryCodeISO3]['PASSWORD']
         self.levels = SETTINGS[countryCodeISO3]['levels']
         self.admin_level = admin_level
 
