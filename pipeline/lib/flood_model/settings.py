@@ -6,7 +6,8 @@ import ast
 # 1. Try to load secrets from env-variables (i.e. when using Github Actions)
  
 try:
-
+ 
+    GLOSSIS_FTP = os.environ["GLOSSIS_FTP"]
     GLOSSIS_USER = os.environ["GLOSSIS_USER"]
     GLOSSIS_PW = os.environ["GLOSSIS_PW"]
     DATALAKE_STORAGE_ACCOUNT_KEY_IBFSYSTEM = os.environ["DATALAKE_STORAGE_ACCOUNT_KEY_IBFSYSTEM"]
