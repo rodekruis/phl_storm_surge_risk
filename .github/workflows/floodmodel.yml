@@ -3,7 +3,7 @@ name: run-stormsurg-model
 on:
   workflow_dispatch:
       branches:
-          - master
+          - main
 env:
    DATALAKE_STORAGE_ACCOUNT_KEY_IBFSYSTEM: ${{ secrets.DATALAKE_STORAGE_ACCOUNT_KEY_IBFSYSTEM }}
    GLOSSIS_FTP: ${{ secrets.GLOSSIS_FTP }}
