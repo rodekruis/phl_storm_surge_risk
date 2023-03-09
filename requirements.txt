@@ -60,4 +60,6 @@ xarray==0.16.2
 googledrivedownloader==0.4
 azure-keyvault-secrets
 azure-identity
-
+azure-storage-file-datalake
+pactools
+SkPy
