@@ -94,7 +94,7 @@ class GlossisData:
         start = time.time()
         end = start + timeToTryDownload
         #fname='2022-09-27_T060000'
-        GlossisFiles=[ CURRENT_DATE.strftime("%Y-%m-%d") +f'_T{hour}0000_Calculate_surge_gtsm4_1.25eu_H.surge.simulated_fc.nc' for hour in ['00','06','12','18']]
+        GlossisFiles=[ CURRENT_DATE.strftime("%Y-%m-%d") +f'_T{hour}0000_Calculate_surge_gtsm4_1.25eu_H.surge.simulated_fc.nc' for hour in ['00']]#,'06','12','18']]
         #[f'{fname}_DflowFM_gtsm4_1.25eu_meteo_fc_H.simulated_fc.nc', f'{fname}_Calculate_surge_gtsm4_1.25eu_H.surge.simulated_fc.nc']:
         
          
