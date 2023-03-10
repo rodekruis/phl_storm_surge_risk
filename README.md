@@ -1,12 +1,29 @@
 # IBF-pipeline Floods
 
-This pipeline calculate storm surge risk
+To estimate the number of affected buildings(people) in a storm surge induced flood event, we combine storm surge level,
+flood extent, and exposure data.
 
-The pipeline consists of a series of Python scripts, which - if activated - are supposed to run daily, to:
+Here are the steps which are implemented in this data pipeline :
+
+  1. Obtain storm surge level forecast data: The storm surge forecast data data come from Global Storm Surge Information System
+    [GLOSSIS]( https://www.deltares.nl/en/projects/global-storm-surge-information-system-glossis/) The storm surge water level data will provide information on the depth of floodwater at a particular location.
+  2. Determine flood extent: The flood extent data come from the national operational assessment of hazards
+    [NOAH project](https://noah.up.edu.ph/).      The flood extent data will provide information on the geographical extent of the flood induced by the storm surge event.
+  3. Identify buildings at risk: Exposure data for this assessment is obtained from the [google building footprint data](https://sites.research.google/open-buildings/).
+    This data was used to identify buildings that are located within the forecasted flood extent area and are therefore at risk of being affected by storm surge induced flooding.
+  4. Overlay the data: Once we obtained the forecasted storm surge level data, flood extent data, and exposure data,
+    we overlay these layers to determine the number of buildings that are at risk of being affected by the forecasted flooding.
+  5. The storm surge advisory maps developed by NOAH has different risk categories, the final output of the analysis provides an
+    estimated number of buildings for each risk categories. The buildings at risk are reported at municipality level
+
+It is important to note that the accuracy of the estimated number of affected buildings will depend on the accuracy of the data sources used.
+
+## IBF-pipeline Floods
+This pipeline calculate storm surge risk forecast in the Philipines based on the steps discribed above
+The pipeline consists of a series of Python scripts, which are supposed to run daily, to:
 - extract relevant forecast input data
 - transform them to create flood extents
 - calculate affected population
-
 
 ## Methods for running this pipeline
 
@@ -37,10 +54,3 @@ Getting its secrets from Github Secrets.
 - The Github action is already scheduled to run daily at a specific time. So wait until that time has passed to test that the pipeline has run correctly.
   - This time can be seen and changed if needed in the 'on: schedule:' part of [floodmodel.yml](.github/workflows/floodmodel.yml), where e.g. `cron:  '0 8 * * *'` means 8:00 AM UTC every day.
 
-
-
-### 3. Azure logic app
-Getting its secrets from Azure Key Vault.
-
-- The Azure logic app needs to be set up separately, based on this repository.
-- The logic to get the secrets from the Azure Key Vault is already included in the code. 
