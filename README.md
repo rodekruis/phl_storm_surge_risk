@@ -18,7 +18,7 @@ Here are the steps which are implemented in this data pipeline :
 
 It is important to note that the accuracy of the estimated number of affected buildings will depend on the accuracy of the data sources used.
 
-## IBF-pipeline Floods
+## Storm Surge risk workflow pipeline
 This pipeline calculate storm surge risk forecast in the Philipines based on the steps discribed above
 The pipeline consists of a series of Python scripts, which are supposed to run daily, to:
 - extract relevant forecast input data
