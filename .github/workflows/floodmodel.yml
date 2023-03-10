@@ -36,14 +36,6 @@ jobs:
              git \
              wget \
              libxml2-utils\
-             libproj-dev \
-             libgeos-dev \
-             libspatialindex-dev \
-             libudunits2-dev \
-             libspatialindex-dev \
-             libssl-dev \
-             libgdal-dev \
-             libxml2-utils\
              gfortran \
              kmod \
              gfortran \
@@ -51,13 +43,16 @@ jobs:
          
       - name: Install system dependencies2
         run: |
-           sudo add-apt-repository ppa:ubuntugis/ppa
+           sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
            sudo apt-get update
-           sudo apt-get install -y postgresql postgresql-contrib  
-           sudo apt-get install -y libproj-dev libgeos++-dev
-           sudo apt-get install -y gdal-bin 
-           sudo apt-get install -y libgdal-dev
-           sudo apt-get install libgnutls28-dev
+           sudo apt-get install -y \
+            libproj-dev \
+            libgeos-dev \
+            libspatialindex-dev \
+            libudunits2-dev \
+            libssl-dev \
+            libgdal-dev \
+            libgnutls28-dev 
 
 
          

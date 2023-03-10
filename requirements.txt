@@ -14,6 +14,7 @@ cryptography==2.1.4
 Fiona==1.8.18
 Flask==1.1.2
 geopandas==0.9.0
+pygeos
 idna==2.6
 itsdangerous==1.1.0
 Jinja2==2.11.3

@@ -250,11 +250,11 @@ class GlossisData:
                     # Get threshold for this specific station
                     if station_id in list(set(df_district_mapping['glossisStation'].values)) and return_period:
                            
-                        logger.info(f'station code: {station_id} and storm level: {return_period}')       
+                        #logger.info(f'station code: {station_id} and storm level: {return_period}')       
                         
                         #df_district_mapping.loc[df_district_mapping['glossisStation'] == station_id,'threshold'] = return_period
                         #adm3_pcode,floodextent 
-                        logger.info(station_id )      
+                        #logger.info(station_id )      
                         station['fc'] = discharge
                         station['leadTimeValue'] = step
                         station['fc_trigger'] = fc_trigger  
