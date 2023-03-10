@@ -34,16 +34,14 @@ Getting its secrets from a local secrets.py file.
 Obviously, this method can be used also non-locally, e.g. by running it as cronjob on a Virtual Machine.
 
 - Install Docker
-- Clone this directory through 
-- Change `pipeline/lib/flood_model/secrets.py.template` to `pipeline/lib/flood_model/secrets.py` and fill in the necessary secrets. Particularly fill in for 
+- Clone this directory through
+- Change `secrets.env.template` to `secrets.env` and fill in the necessary secrets. Particularly fill in for
   - GLOSSIS_USER: retrieve from someone who knows
   - GLOSSIS_PW: retrieve from someone who knows
 
 - Go to the root folder of the repository
 - Build and run Docker image: `docker-compose up --build`
 - (Optional) When you are finished, to remove any docker container(s) run: `docker-compose down`
-
-
 
 ### 2. Github Actions
 Getting its secrets from Github Secrets.
