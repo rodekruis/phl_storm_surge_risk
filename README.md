@@ -18,6 +18,11 @@ Here are the steps which are implemented in this data pipeline :
 
 It is important to note that the accuracy of the estimated number of affected buildings will depend on the accuracy of the data sources used.
 
+
+## Acknowledgments
+
+- [Start Network](https://startnetwork.org/)
+
 ## Storm Surge risk workflow pipeline
 This pipeline calculate storm surge risk forecast in the Philipines based on the steps discribed above
 The pipeline consists of a series of Python scripts, which are supposed to run daily, to:
@@ -54,6 +59,3 @@ Getting its secrets from Github Secrets.
 - The Github action is already scheduled to run daily at a specific time. So wait until that time has passed to test that the pipeline has run correctly.
   - This time can be seen and changed if needed in the 'on: schedule:' part of [floodmodel.yml](.github/workflows/floodmodel.yml), where e.g. `cron:  '0 8 * * *'` means 8:00 AM UTC every day.
 
-### Acknowledgments
-
-- [Start Network](https://startnetwork.org/)
