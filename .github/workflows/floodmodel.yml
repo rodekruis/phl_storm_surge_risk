@@ -6,6 +6,7 @@ on:
           - main
 env:
    DATALAKE_STORAGE_ACCOUNT_KEY_IBFSYSTEM: ${{ secrets.DATALAKE_STORAGE_ACCOUNT_KEY_IBFSYSTEM }}
+   DATALAKE_STORAGE_ACCOUNT_NAME_IBFSYSTEM: ${{ secrets.DATALAKE_STORAGE_ACCOUNT_NAME_IBFSYSTEM }}
    GLOSSIS_FTP: ${{ secrets.GLOSSIS_FTP }}
    GLOSSIS_PW: ${{ secrets.GLOSSIS_PW }}
    GLOSSIS_USER: ${{ secrets.GLOSSIS_USER }}
@@ -81,8 +82,9 @@ jobs:
            GLOSSIS_FTP: ${{ secrets.GLOSSIS_FTP }}
            GLOSSIS_PW: ${{ secrets.GLOSSIS_PW }}
            GLOSSIS_USER: ${{ secrets.GLOSSIS_USER }}
-           IBF_PASSWORD: ${{ secrets.IBF_PASSWORD }}
            DATALAKE_STORAGE_ACCOUNT_KEY_IBFSYSTEM: ${{ secrets.DATALAKE_STORAGE_ACCOUNT_KEY_IBFSYSTEM }}   
+           DATALAKE_STORAGE_ACCOUNT_NAME_IBFSYSTEM: ${{ secrets.DATALAKE_STORAGE_ACCOUNT_NAME_IBFSYSTEM }}
+           DATALAKE_API_VERSION: ${{ secrets.DATALAKE_API_VERSION }}
         run: |
            run-stormsurge-model
         working-directory: ${{ env.running-directory }}
