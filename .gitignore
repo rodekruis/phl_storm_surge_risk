@@ -8,11 +8,10 @@
 # Configuration, secrets, etc:
 .env
 
-
 # Local data files
 pipeline/data/*
 *.zip
-
+crontab
 # Generated files
 dist
 coverage
@@ -27,9 +26,10 @@ logs
 *.log
 npm-debug.log*
 .npm
-
+*.conf
 # Secrets
 secrets
+secrets.env
 pipeline/lib/flood_model/secrets.py
 
 

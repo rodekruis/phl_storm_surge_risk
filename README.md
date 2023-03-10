@@ -1,4 +1,4 @@
-# IBF-pipeline Floods
+# STORM SURGE RISK ANALYSIS
 
 To estimate the number of affected buildings(people) in a storm surge induced flood event, we combine storm surge level,
 flood extent, and exposure data.
@@ -54,3 +54,6 @@ Getting its secrets from Github Secrets.
 - The Github action is already scheduled to run daily at a specific time. So wait until that time has passed to test that the pipeline has run correctly.
   - This time can be seen and changed if needed in the 'on: schedule:' part of [floodmodel.yml](.github/workflows/floodmodel.yml), where e.g. `cron:  '0 8 * * *'` means 8:00 AM UTC every day.
 
+### Acknowledgments
+
+- [Start Network](https://startnetwork.org/)
