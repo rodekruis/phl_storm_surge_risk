@@ -73,8 +73,8 @@ SETTINGS = {
 
 # Change this date only in case of specific testing purposes
 from datetime import date, timedelta
-CURRENT_DATE = date.today()
-#CURRENT_DATE=date.today() - timedelta(1) # to use yesterday's date
+#CURRENT_DATE = date.today()
+CURRENT_DATE=date.today() - timedelta(1) # to use yesterday's date
 
 
 
