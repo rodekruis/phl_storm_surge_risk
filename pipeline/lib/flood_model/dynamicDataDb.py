@@ -312,7 +312,7 @@ class DatabaseManager:
             container_name='ibftyphoonforecast/'
             file_system_client = service_client.get_file_system_client(file_system=container_name)
             directory_name= 'ibf_model_results' 
-            filename=self.Output_folder + 'ss_model_outputs'
+            #filename=self.affectedFolder + 'stormsurges_model_outputs'
             dir_client = file_system_client.get_directory_client(directory_name)
             dir_client.create_directory()
             

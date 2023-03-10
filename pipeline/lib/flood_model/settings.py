@@ -11,21 +11,11 @@ try:
     GLOSSIS_USER = os.environ["GLOSSIS_USER"]
     GLOSSIS_PW = os.environ["GLOSSIS_PW"]
     DATALAKE_STORAGE_ACCOUNT_KEY_IBFSYSTEM = os.environ["DATALAKE_STORAGE_ACCOUNT_KEY_IBFSYSTEM"]
-    
-    #ADMIN_LOGIN = os.environ["ADMIN_LOGIN"]
-    #ADMIN_LOGIN =os.environ.get("ADMIN_LOGIN") 
-    #IBF_PASSWORD=os.environ["IBF_PASSWORD"]
-    #DATALAKE_STORAGE_ACCOUNT_NAME = os.environ["DATALAKE_STORAGE_ACCOUNT_NAME"]
-    #DATALAKE_STORAGE_ACCOUNT_KEY = os.environ["DATALAKE_STORAGE_ACCOUNT_KEY"]
-
-
-    
-
+    DATALAKE_STORAGE_ACCOUNT_NAME_IBFSYSTEM= os.environ["510ibfsystem"] 
+     
 except:
      print('No environment variables found.')
 #.format(**os.environ))    
-
-    
 
 # 2. If 1 fail, then assume secrets are loaded via secrets.py file (when running locally). If neither of the 3 options apply, this script will fail.
 try:

@@ -43,6 +43,8 @@ Obviously, this method can be used also non-locally, e.g. by running it as cronj
 - Build and run Docker image: `docker-compose up --build`
 - (Optional) When you are finished, to remove any docker container(s) run: `docker-compose down`
 
+The resulsts from pipeline will be uploaded to 510 datalack. The latest model run results can be downloade from [here](https://510ibfsystem.blob.core.windows.net/ibftyphoonforecast/ibf_model_results/ss_model_outputs.zip)
+
 ### 2. Github Actions
 Getting its secrets from Github Secrets.
 
