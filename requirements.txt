@@ -41,7 +41,7 @@ pytz==2021.1
 pyxdg==0.25
 rasterio==1.2.0
 rasterstats==0.15.0
-requests==2.25.1
+requests==2.32.2
 requests-futures==1.0.0
 scipy==1.5.4
 SecretStorage==2.3.1
